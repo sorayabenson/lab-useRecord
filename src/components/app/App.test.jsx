@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -7,8 +11,8 @@ describe('App component', () => {
   it('renders App', () => {
     render(<App />);
 
+    const colorPalette = screen.getByRole('color', { name: 'color selector' });
     const colorSquare = screen.getByTestId('rang');
-    const colorPalette = screen.getByTestId('rangha');
     const undo = screen.getByRole('button', { name: 'undo' });
     const redo = screen.getByRole('button', { name: 'redo' });
 

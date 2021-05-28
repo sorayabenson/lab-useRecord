@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    background: hsl(160, 100%, 98%);
+    color: #210033;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    width: 4rem;
+    height: 4rem;
+    margin: 0px;
+    /* padding: 0px; */
+    border-color: transparent;
+    color: transparent;
+    /* ::-webkit-color-swatch,
+    ::-moz-color-swatch {
+        border-color: transparent;
+    } */
+}
+
+
+button {
+    width: 4rem;
+    height: 4rem;
+}
