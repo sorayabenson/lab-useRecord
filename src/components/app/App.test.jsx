@@ -12,7 +12,7 @@ describe('App component', () => {
     render(<App />);
 
     const colorPalette = screen.getByRole('color', { name: 'color selector' });
-    const colorSquare = screen.getByTestId('rang');
+    const colorSquare = screen.getByRole('figure', { name: 'color square' });
     const undo = screen.getByRole('button', { name: 'undo' });
     const redo = screen.getByRole('button', { name: 'redo' });
 

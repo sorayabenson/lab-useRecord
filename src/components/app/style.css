@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&family=Harmattan:wght@400;700&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -10,8 +12,10 @@ body, html {
     justify-content: center;
     align-items: center;
     font-size: 16px;
-    background: hsl(160, 100%, 98%);
-    color: #210033;
+    font-family: 'Changa', sans-serif;
+    /* font-family: 'Harmattan', sans-serif; */
+    background: #fffdfa;
+    color: #1C1C1C;
 }
 
 main {
@@ -23,21 +27,89 @@ main {
     align-items: center;
 }
 
+
+.colorPallete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 input {
+    visibility: hidden;
+}
+
+.colorSelector {
     width: 4rem;
     height: 4rem;
     margin: 0px;
-    /* padding: 0px; */
-    border-color: transparent;
-    color: transparent;
-    /* ::-webkit-color-swatch,
-    ::-moz-color-swatch {
-        border-color: transparent;
-    } */
+    padding: 1rem;
+    border: 2px solid #1C1C1C;
+    border-radius: 50%;
+    box-shadow: #1c1c1c -2px 2px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
+.colorSelector:hover {
+    box-shadow: #C4FFEE -2px 2px;
+}
+
+.colorSquare {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.colorSquare figure{
+    width: 16rem;
+    height: 16rem;
+    border: #1C1C1C 3px solid;
+    border-radius: 5px;
+    box-shadow: #1C1C1C -3px 3px;
+}
+
+nav {
+    width: 16rem;
+    height: auto;
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 button {
     width: 4rem;
     height: 4rem;
+    background: none;
+    border:none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
+
+.undo {
+    background: url('/public/undo.png') no-repeat;
+}
+
+.undo:hover {
+    background: url('/public/undo-hover.png') no-repeat;
+}
+
+.redo {
+    background: url('/public/redo.png') no-repeat;
+}
+
+.redo:hover {
+    background: url('/public/redo-hover.png') no-repeat;
+}
+
+.label {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+/* img {
+    width: 16rem;
+    height: auto;
+} */
