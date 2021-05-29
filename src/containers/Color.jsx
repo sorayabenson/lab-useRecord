@@ -18,6 +18,7 @@ const Color = () => {
         setHistoryIndex((historyIndex - 1))
     }
 
+    //instead of adding newColor to the front of the array, it needs to be inserted where ever the index is. Fix.
     const record = (newColor) => {
         setColor(newColor)
         setHistory([newColor, ...history])
