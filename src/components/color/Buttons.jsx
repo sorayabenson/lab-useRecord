@@ -8,7 +8,7 @@ const Buttons = ({ index, history, onUndo, onRedo }) => (
                 onClick={onUndo} 
                 aria-label='undo' 
                 className={style.undo}
-                disabled={(history.length === 0 || index === history.length)}
+                disabled={(history.length === 0 || index + 1 === history.length)}
             ></button>
             <button 
                 onClick={onRedo} 

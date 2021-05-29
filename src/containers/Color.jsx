@@ -8,34 +8,19 @@ const Color = () => {
     const [history, setHistory] = useState([]);
     const [historyIndex, setHistoryIndex] = useState(0);
 
-    // const handleChange = (e) => {
-    //     setColor(e.target.value);
-    // }
-    
     const undo = () => {
-        //go back one index at a time starting at current index
-        //every click + 1
-        //set history limit???
-        setColor(history[historyIndex])
+        setColor(history[historyIndex + 1])
         setHistoryIndex((historyIndex + 1))
     }
 
     const redo = () => {
-        //go forward one index at a time starting at current index
-        //every click - 1
-        //stops if 0
-        setColor(history[historyIndex])
+        setColor(history[historyIndex - 1])
         setHistoryIndex((historyIndex - 1))
     }
 
-    const record = (e) => {
-        if (history.length === 0) {
-            setColor(e.target.value)
-            setHistory([color])
-        } else {
-            setColor(e.target.value)
-            setHistory([color, ...history])
-        }
+    const record = (newColor) => {
+        setColor(newColor)
+        setHistory([newColor, ...history])
     }
 
     useEffect(() => {
@@ -49,14 +34,16 @@ const Color = () => {
         <main>
             <ColorPalette 
                 color={color}
-                onChange={record}
+                onChange={e => record(e.target.value)}
             />
             <ColorSquare color={color}/>
-            <Buttons onUndo={undo} onRedo={redo} index={historyIndex} history={history}/>
+            <Buttons 
+                onUndo={undo} 
+                onRedo={redo} 
+                index={historyIndex} 
+                history={history}/>
         </main>
     )
 }
 
 export default Color;
-
-{/* <img src='https://www.freepnglogos.com/uploads/tiger-png/tiger-gallery-png-images-3.png' alt='tiger' style={{background: color}} /> */}
