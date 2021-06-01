@@ -5,6 +5,7 @@ import ColorSquare from '../components/color/ColorSquare';
 
 const Color = () => {
     const [color, setColor] = useState('#4ecdc4');
+    const [bgColor, setBgColor] = useState('#ff8800');
     const [history, setHistory] = useState([]);
     const [historyIndex, setHistoryIndex] = useState(0);
 
@@ -37,7 +38,9 @@ const Color = () => {
                 color={color}
                 onChange={e => record(e.target.value)}
             />
-            <ColorSquare color={color}/>
+            <ColorSquare 
+                lineColor={color}
+                bgColor={bgColor}/>
             <Buttons 
                 onUndo={undo} 
                 onRedo={redo} 

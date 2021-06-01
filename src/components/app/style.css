@@ -109,7 +109,32 @@ button {
     font-weight: 500;
 }
 
-/* img {
+/* .ghost {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.ghostLine {
+    position: relative;
+    left: 0;
+    top: 0;
+    filter: opacity(0.5);
+}
+
+.ghostColor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: opacity(0.5);
+    z-index: -1;
+} */
+
+.ghostline {
+    fill: #C4FFEE;
+}
+
+img {
     width: 16rem;
     height: auto;
-} */
+}
