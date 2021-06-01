@@ -22,6 +22,12 @@ const Color = () => {
     const record = (newColor) => {
         setColor(newColor)
         setHistory([newColor, ...history])
+        // if (history.length === 0) {
+        //     setHistory([newColor])
+        // } else {
+        //     setHistory(historyArray => [...historyArray.slice(0, historyIndex), newColor, ...historyArray.slice(historyIndex + 1, historyArray.length)])
+        //     setHistory(history => [...history.splice(0, historyIndex), newColor, ...history.splice(historyIndex + 1, history.length)])
+        // }
     }
 
     useEffect(() => {
